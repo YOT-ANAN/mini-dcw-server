@@ -1,10 +1,11 @@
 var express = require('express');
+var cors = require('cors')
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
-var bears = [];
 var firebase = require("firebase");
 bodyParser = require('body-parser');
+app.use(cors());
 var config = {
     apiKey: "",
     authDomain: "",
@@ -17,7 +18,7 @@ firebase.initializeApp(config);
 
 
 var database = firebase.database();
-router.route('/members') //
+router.route('/members') 
     .post(function (req, res) {
         let memberRef = database.ref('members/');
         memberRef.child(req.body.id).set({
