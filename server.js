@@ -7,12 +7,12 @@ var bodyParser = require('body-parser');
 var firebase = require("firebase");
 app.use(cors());
 var config = {
-    apiKey: "AIzaSyAbE-fDNLzlwpxj1fUwuLh1SBaDcGndrc4",
-    authDomain: "dcw-my-assignment.firebaseapp.com",
-    databaseURL: "https://dcw-my-assignment.firebaseio.com",
-    projectId: "dcw-my-assignment",
-    storageBucket: "dcw-my-assignment.appspot.com",
-    messagingSenderId: "318692992741"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
 };
 firebase.initializeApp(config);
 exports.api = functions.https.onRequest(router)
